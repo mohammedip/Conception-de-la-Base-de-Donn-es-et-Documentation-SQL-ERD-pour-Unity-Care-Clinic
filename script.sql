@@ -89,10 +89,10 @@ FOREIGN KEY (room_id) REFERENCEs rooms (room_id));
 INSERT INTO patients (first_name, last_name, gender, date_of_birth, phone_number, email, address)
 VALUES
 ('khlid', 'hada', 'Male', '1990-01-01', '1234567890', 'khlid.doe@example.com', '123 Elm Street'),
-('monir', 'lkadi', 'Female', '1985-05-15', '9876543210', 'monir.smith@example.com', '456 Oak Avenue'),
+('khawla', 'lkadi', 'Female', '1985-05-15', '9876543210', 'monir.smith@example.com', '456 Oak Avenue'),
 ('hamou', 'jbran', 'Male', '1992-07-20', '1122334455', 'hamou.brown@example.com', '789 Pine Lane'),
-('soufian', 'oulhage', 'Female', '2000-11-30', '5566778899', 'soufian.davis@example.com', '101 Maple Drive'),
-('mohammed', 'riahi', 'Other', '1998-09-12', '6677889900', 'mohammed.wilson@example.com', '202 Birch Road');
+('Hajar', 'oulhage', 'Female', '2000-11-30', '5566778899', NULL, '101 Maple Drive'),
+('riki', 'low', 'Other', '1998-09-12', '6677889900', 'riki.wilson@example.com', '202 Birch Road');
 
 INSERT INTO departments (department_name, location)
 VALUES

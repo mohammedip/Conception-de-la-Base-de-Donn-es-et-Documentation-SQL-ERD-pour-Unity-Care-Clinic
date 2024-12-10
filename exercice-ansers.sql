@@ -53,4 +53,39 @@ SELECT COUNT(*) AS appointments_number from appointments
 
 SELECT COUNT(*) as doctor_number,(SELECT department_name from departments WHERE departments.department_id = doctors.department_id ) as categorie_name  from doctors GROUP BY department_id 
 
+12-
 
+SELECT AVG(TIMESTAMPDIFF(YEAR, date_of_birth, NOW())) as avrege_age FROM patients
+
+13-
+
+SELECT MAX(appointment_date)as later_date , MAX(appointment_time)as later_heure FROM appointments
+
+14-
+
+SELECT SUM(admissions.ROWS) as admissions_number,(SELECT room_id from rooms WHERE admissions.room_id = rooms.room_id ) as room  from admissions GROUP BY room_id
+
+
+SELECT (SELECT room_id from rooms WHERE admissions.room_id = rooms.room_id ) as room, COUNT(*) as admissions_number from admissions GROUP BY 
+
+15-
+
+SELECT * from patients where email IS NULL
+
+17-
+
+DELETE FROM appointments WHERE appointment_date<'2024-01-01'
+
+18-
+
+UPDATE departments SET department_name='Cancer Treatment'  WHERE department_name='Orthopedics'
+
+19-
+
+SELECT gender,COUNT(gender)as how_match_gerders  from patients GROUP BY gender HAVING COUNT(gender)>=2 
+
+20-
+
+CREATE VIEW admissions_en_cours AS SELECT * from admissions WHERE admission_date>'2024-12-10'
+
+SELECT * from admissions_en_cours 
